@@ -1,0 +1,17 @@
+<h1>{{appTitle1}}</h1>
+<div *ngIf = 'appStatus'> Div visible si appStatus vaut true</div>
+<h1>{{appTitle2}}</h1>
+<div *ngFor = 'let lst of appList'>
+  <ul>
+    <li>{{lst.ID}}</li>
+    <li>{{lst.Name}}</li>
+  </ul>
+</div>
+<h1>{{appTitle3}}</h1>
+<div *ngFor = 'let lst of appList2'>
+  <ul>
+    <li>{{lst.ID}}</li>
+    <img [src] = 'lst.url'>
+  </ul>
+</div>
+<h1>{{appTitle4}}</h1>
