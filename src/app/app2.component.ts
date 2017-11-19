@@ -5,7 +5,6 @@ import { Http , Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-
 @Component ({
   selector: 'my-app2',
   templateUrl: 'app/app2.component.html',
@@ -41,10 +40,20 @@ export class App2Component {
   appTitle4: string = 'Test Service http , voir console :';
 
   iproducts: IProduct[];
-  constructor(private _product: ProductService) {
+  constructor(private _product: ProductService) {//injection de la classe ProductService
   }
   ngOnInit() : void {
     this._product.getproducts()
       .subscribe(iproducts => this.iproducts = iproducts);
   }
+  
+    appTitle5: string = 'data binding :';
+    appTitle6: string = 'Handling Events:';
+  Status: boolean = true; 
+   clicked(event) { 
+      this.Status = !this.Status; 
+   }  
+      appTitle7: string = 'Custom Pipes:';
+  
+   
 }

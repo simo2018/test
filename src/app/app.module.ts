@@ -7,6 +7,7 @@ import {HttpModule} from "@angular/http";
 import {RouterModule,Routes} from "@angular/router";
 import {Appproduct} from "./product.component";
 import {AppInventory} from "./Inventory.component";
+import { MultiplierPipe } from './multiplier.pipe';
 import {ProductFormComponent} from "./product-form.component";
 import {FormsModule} from "@angular/forms";
 
@@ -19,7 +20,7 @@ const appRoutes: Routes = [
   //The BrowserModule is required by default for any web based angular application.
   //ex you will have access to ngif and ngFor
   imports:      [ BrowserModule,FormsModule,HttpModule ,RouterModule.forRoot(appRoutes)],
-  declarations: [ AppComponent,App2Component,Appproduct,AppInventory,ProductFormComponent ],
+  declarations: [ AppComponent,App2Component,Appproduct,AppInventory,ProductFormComponent,MultiplierPipe ],
   bootstrap:    [ AppComponent ]//The bootstrap option tells Angular which Component to bootstrap in the application.
 })
 export class AppModule { }

@@ -15,3 +15,20 @@
   </ul>
 </div>
 <h1>{{appTitle4}}</h1>
+<h1>{{appTitle5}}</h1>
+<div>
+type something in the Input
+   <input [value] = "name" (input) = "name = $event.target.value">
+   {{name}}
+</div>
+<h1>{{appTitle6}}</h1>
+
+<div> 
+   {{Status}} 
+   <button (click) = "clicked()">Click</button> 
+</div> 
+
+<h1>{{appTitle7}}</h1>
+<p>Multiplier: {{2 | Multiplier: 10}}</p> 
+
+     
